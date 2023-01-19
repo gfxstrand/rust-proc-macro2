@@ -12,7 +12,11 @@ if rc.version().version_compare('< 1.31')
   error('Minimum rustc supported version is 1.31')
 endif
 
-rust_args = ['--cfg', 'feature="proc-macro"', '--cfg', 'feature="default"']
+rust_args = [
+  '--cfg', 'feature="proc-macro"',
+  '--cfg', 'feature="default"',
+  '--cfg', 'use_proc_macro',
+]
 if rc.version().version_compare('< 1.32')
   rust_args += ['--cfg', 'no_libprocmacro_unwind_safe']
 endif
