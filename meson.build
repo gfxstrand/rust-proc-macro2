@@ -1,7 +1,7 @@
 project(
   'proc-macro2',
   'rust',
-  version : '1.0.49',
+  version : '1.0.56',
   license :'MIT OR Apache-2.0',
   default_options : ['rust_std=2018'],
 )
